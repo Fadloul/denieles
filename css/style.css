@@ -1,0 +1,307 @@
+/* =========================
+   1. Variabili e impostazioni
+   ========================= */
+
+:root {
+    --colore-sfondo: #0b1020;
+    --colore-contenitore: #151d33;
+    --colore-principale: #168cff;
+    --colore-secondario: #00d4ff;
+    --colore-testo: #f1f5f9;
+    --colore-testo-secondario: #b8c4d9;
+    --colore-bordo: #2c3b5c;
+    --font-principale: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* =========================
+   2. Corpo della pagina
+   ========================= */
+
+body {
+    margin: 0;
+    font-family: var(--font-principale);
+    background-color: var(--colore-sfondo);
+    color: var(--colore-testo);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--colore-contenitore);
+    text-align: center;
+    padding: 25px 15px;
+    border-bottom: 3px solid var(--colore-principale);
+}
+
+header h1 {
+    color: var(--colore-secondario);
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    color: var(--colore-testo-secondario);
+}
+
+/* =========================
+   3. Barra di navigazione
+   ========================= */
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+nav a {
+    display: block;
+    padding: 10px 16px;
+    color: var(--colore-testo);
+    text-decoration: none;
+    background-color: #202c47;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--colore-principale);
+    color: white;
+}
+
+/* =========================
+   4. Contenuto principale
+   ========================= */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: var(--colore-contenitore);
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid var(--colore-bordo);
+    border-radius: 10px;
+}
+
+section h2 {
+    color: var(--colore-secondario);
+    border-bottom: 2px solid var(--colore-principale);
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: var(--colore-principale);
+}
+
+p {
+    color: var(--colore-testo-secondario);
+}
+
+strong {
+    color: var(--colore-testo);
+}
+
+a {
+    color: var(--colore-secondario);
+}
+
+a:hover {
+    color: white;
+}
+
+/* =========================
+   5. Schede dei giocatori
+   ========================= */
+
+article {
+    background-color: #202c47;
+    padding: 18px;
+    margin: 15px 0;
+    border-left: 4px solid var(--colore-principale);
+    border-radius: 6px;
+}
+
+article h3 {
+    margin-top: 0;
+}
+
+/* =========================
+   6. Tabelle
+   ========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #202c47;
+}
+
+th,
+td {
+    border: 1px solid var(--colore-bordo);
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--colore-principale);
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #18233b;
+}
+
+tbody tr:hover {
+    background-color: #293b5c;
+}
+
+/* =========================
+   7. Moduli
+   ========================= */
+
+form {
+    max-width: 650px;
+    margin: 20px auto 0;
+}
+
+form p {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--colore-testo);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    font-family: var(--font-principale);
+    font-size: 1rem;
+    color: var(--colore-testo);
+    background-color: #0b1020;
+    border: 1px solid var(--colore-bordo);
+    border-radius: 5px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--colore-principale);
+    outline-offset: 2px;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+input[type="checkbox"] + label {
+    display: inline;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 5px;
+    background-color: var(--colore-principale);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0066cc;
+}
+
+/* =========================
+   8. Liste
+   ========================= */
+
+main ul,
+main ol {
+    padding-left: 25px;
+}
+
+main li {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   9. Immagini
+   ========================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================
+   10. Piè di pagina
+   ========================= */
+
+footer {
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+    background-color: var(--colore-contenitore);
+    border-top: 3px solid var(--colore-principale);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* =========================
+   11. Layout responsive
+   ========================= */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
